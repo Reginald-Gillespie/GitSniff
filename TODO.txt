@@ -1,0 +1,16 @@
+
+- Instructions for how to filter your email if found.
+  This might not be worth it, considering the email will already be archived
+  by places like GHArchive...
+
+- If you contribute to a repo and delete your fork, this would fail to scan it because it's not under your repos.
+  Find a way to discover commits from users across all of github, and scan that? 
+  That's basically what event scanning is, it's just event history can be cleared.
+
+- Research GHArchive searching with google BigQuery integration.
+  I'd like to look into this, but it requires paying for BigQuery.
+  It would allow finding emails like Events, but works even after the events are gone
+   (whether cleared by github at request, or just >1 month I think is the limit)
+
+- Occasionally, scanning a commit will send an error when something isn't defined.
+  This isn't a big deal but I should probably silence it.
