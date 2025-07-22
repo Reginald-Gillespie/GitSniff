@@ -14,7 +14,7 @@ I built this because all the other similar tools were too limited or broke years
 ## Install
 ```bash
 git clone https://github.com/Reginald-Gillespie/GitSniff
-cd gitsniff
+cd GitSniff
 pip install -r requirements.txt
 ```
 
