@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gitsniff"
-version = "1.0.1"
+version = "1.0.2"
 description = "GitHub Email Scanner for OSINT - Extract emails from repositories and user events"
 readme = "README.md"
 license = {text = "MIT"}
