@@ -13,21 +13,19 @@ I built this because all the other similar tools were too limited or broke years
 
 ## Install
 ```bash
-git clone https://github.com/Reginald-Gillespie/GitSniff
-cd GitSniff
-pip install -r requirements.txt
+pip install gitsniff
 ```
 
 ## Usage
 ```bash
 # Scan a user.
-python GitSniff.py -u <username>
+gitsniff -u <username>
 
 # Scan a single repo.
-python GitSniff.py -r <repo>
+gitsniff -r <repo>
 
 # Show full help pages.
-python GitSniff.py -h
+gitsniff -h
 ```
 
 ![GitSniff Scan Results](results.png)
@@ -37,8 +35,8 @@ The email, `reginaldgillespie@protonmail.com`, is my email. The rest are the ema
 
 ### Full Help Page
 ```
-$ python .\GitSniff.py -h
-usage: GitSniff.py [-h] (-u USERNAME | -r OWNER/REPO) [--no-repos] [--no-events] [-f] [--private] [--max-commits N] [--start-index N] [--max-repos N] [--max-events N] [-t TOKEN] [--token-file FILE] [-p URL] [-j]
+$ gitsniff -h
+usage: gitsniff [-h] (-u USERNAME | -r OWNER/REPO) [--no-repos] [--no-events] [-f] [--private] [--max-commits N] [--start-index N] [--max-repos N] [--max-events N] [-t TOKEN] [--token-file FILE] [-p URL] [-j]
 
 GitSniff - GitHub Email Scanner for OSINT
 
@@ -71,12 +69,12 @@ Connection & Output:
   -j, --json            Output in JSON format
 
 Examples:
-  GitSniff.py -u username                     # Scan user's repositories and events
-  GitSniff.py -u username --no-events         # Scan only repositories
-  GitSniff.py -u username --no-repos          # Scan only public events
-  GitSniff.py -r owner/repo                   # Scan specific repository
-  GitSniff.py -u username -f --max-repos 5    # Include forks, limit to 5 repos
-  GitSniff.py -u username --private -t TOKEN  # Include private repos with token
+  gitsniff -u username                     # Scan user's repositories and events
+  gitsniff -u username --no-events         # Scan only repositories
+  gitsniff -u username --no-repos          # Scan only public events
+  gitsniff -r owner/repo                   # Scan specific repository
+  gitsniff -u username -f --max-repos 5    # Include forks, limit to 5 repos
+  gitsniff -u username --private -t TOKEN  # Include private repos with token
 ```
 
 
