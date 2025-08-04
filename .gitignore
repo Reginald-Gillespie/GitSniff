@@ -1,2 +1,6 @@
 .vscode
 pat.env
+.venv
+gitsniff.egg-info
+dist
+__pycache__

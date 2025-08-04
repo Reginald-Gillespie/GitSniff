@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitsniff"
+version = "1.0.0"
+description = "GitHub Email Scanner for OSINT - Extract emails from repositories and user events"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "WKoA", email = "reginaldgillespie@protonmail.com"}
+]
+maintainers = [
+    {name = "WKoA", email = "reginaldgillespie@protonmail.com"}
+]
+keywords = ["github", "osint", "email", "scanner", "reconnaissance", "git"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.25.0",
+    "rich>=10.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.800",
+    "pre-commit>=2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Reginald-Gillespie/GitSniff"
+Documentation = "https://github.com/Reginald-Gillespie/GitSniff#readme"
+Repository = "https://github.com/Reginald-Gillespie/GitSniff"
+"Bug Tracker" = "https://github.com/Reginald-Gillespie/GitSniff/issues"
+
+[project.scripts]
+gitsniff = "gitsniff.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["gitsniff*"]
+
+[tool.setuptools.package-data]
+gitsniff = ["*.txt", "*.md"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=gitsniff --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
